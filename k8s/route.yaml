@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: andreas-nginx-demo
+  labels:
+    app: andreas-nginx-demo
+spec:
+  to:
+    kind: Service
+    name: andreas-nginx-demo
+    weight: 100
